@@ -1,0 +1,34 @@
+<h1>Hey There!</h1>
+
+<h2>Happy Reading!</h2>
+
+<table>
+  <thead>
+    <tr>
+    <th>id</th>
+    <th>sku</th>
+    <th>name</th>
+    <th>description</th>
+    <th>unit Price</th>
+    <th>Image</th>
+    <th>active</th>
+    <th>Units in stock</th>
+    <th>Created on</th>
+    <th>Updated on</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let rows of viewBooks$ | async">
+      <td>{{rows.id}}</td>
+      <td>{{rows.sku}}</td>
+      <td>{{rows.name}}</td>
+      <td>{{rows.description}}</td>
+      <td>{{rows.unitPrice}}</td>
+      <td>{{rows.imageUrl}}</td>
+      <td>{{rows.active}}</td>
+      <td>{{rows.unitsInStock}}</td>
+      <td>{{rows.createdOn}}</td>
+      <td>{{rows.updatedOn}}</td>
+    </tr>
+  </tbody>
+</table>
